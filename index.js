@@ -1,5 +1,6 @@
-const x = 1;
+import { getWeather, displayWeather } from './src/features/weather.js'
 
-let y = 3;
-x = 6;
-console.log(y);
+const city = await getWeather('tokyo');
+console.log(city);
+
+displayWeather(city);

@@ -6,12 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <link rel="stylesheet" href="./src/assets/weather-app.css" />
+    <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <main>
-      <div id="overview"></div>
-      <div id="details"></div> 
-      <div id="forecast"></div>
-    </main>
+    <div id=wrapper>
+      <div id="search">
+        <input type="text" name="search_box" id="search-box">
+      </div>
+      <div id="overview">
+        <h2 id="city">Manila</h2>
+        <div id="temp">25°</div>
+        <div id="main">Cloudy</div>
+        <img id="icon" src="#" alt="" srcset="">
+      </div>
+      <div id="details">
+        <div id="description">Cloudy</div>
+        <div id="clouds">69%</div>
+        <div id="humidity">69%</div>
+        <div id="wind">20mph</div>
+      </div>
+    </div>
   </body>
 </html>
