@@ -1,6 +1,12 @@
-import { getWeather, displayWeather } from './src/features/weather.js'
+import { getWeather } from './src/features/weather.js'
 
-const city = await getWeather('tokyo');
-console.log(city);
+let city = 'san francisco';
+getWeather(city);
 
-displayWeather(city);
+document.querySelector("#search-box").addEventListener('change', () => {
+  getWeather(document.querySelector("#search-box").value);
+});
+
+document.querySelector('#search-box').addEventListener('keyup', (event) => {
+  if(event.key === 'Enter') getWeather(event.target.value);
+}); 

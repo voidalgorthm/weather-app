@@ -3,11 +3,10 @@ async function getWeather(location) {
     `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=0f66d6226605945fb76dd2e1f8ab0a36`
   );
   const data = await response.json();
-  return data;
+  displayWeather(data);
 }
 
 function displayWeather(data) {
-  console.log(data.sys.country);
   const name = data.name.trim();
   const { all } = data.clouds;
   const { main, icon, description } = data.weather[0];

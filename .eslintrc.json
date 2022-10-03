@@ -10,6 +10,7 @@
     "class-methods-use-this": "off",
     "no-plusplus": "off",
     "no-param-reassign": "off",
+    "comma-dangle": ["error", "always"],
   },
   "env": {
     "browser": true,
